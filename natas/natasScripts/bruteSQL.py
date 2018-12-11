@@ -3,7 +3,13 @@ import requests
 
 url = 'http://natas15.natas.labs.overthewire.org/index.php'
 
-#data is what is inputted into the Username: box. test is inputted in this case
+#data is what is inputted into the Username: box.
+#stores the "User Doesn't Exist" and "User Does Exist"
 r = requests.post(url, auth=('natas15', 'AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J'), data={'username': 'natas16'})
+userExistsText = r.text
 
-print(r.text)
+r = requests.post(url, auth=('natas15', 'AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J'), data={'username': 'nothin'})
+userDontExistsText = r.text
+
+print(userExistsText)
+print(userDontExistsText)
