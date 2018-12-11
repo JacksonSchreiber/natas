@@ -12,8 +12,9 @@ r = requests.post(url, auth=('natas15', 'AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J'), dat
 userDontExistsText = r.text
 
 charList = ""
-for i in range(33,177):
-    charList + chr(i)
+for i in range(33,127):
+    charList = charList + chr(i)
+
 
 
 print(charList)
