@@ -11,5 +11,9 @@ userExistsText = r.text
 r = requests.post(url, auth=('natas15', 'AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J'), data={'username': 'nothin'})
 userDontExistsText = r.text
 
-print(userExistsText)
-print(userDontExistsText)
+charList = ""
+for i in range(33,177):
+    charList + chr(i)
+
+
+print(charList)
